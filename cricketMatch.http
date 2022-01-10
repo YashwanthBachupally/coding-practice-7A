@@ -1,0 +1,49 @@
+###
+
+//1.1....Returns a list of all the players in the player table
+
+
+get http://localhost:3000/players/
+
+
+#####
+
+//2.......Returns a specific player based on the player ID
+
+get http://localhost:3000/players/2/
+
+###
+//3.......Updates the details of a specific player based on the player ID
+
+
+put http://localhost:3000/players/2/
+Content-Type: application/json
+
+{
+  "playerName": "Raju"
+}
+
+
+###
+
+//4.......Returns the match details of a specific match
+
+get http://localhost:3000/matches/18/
+
+####
+
+//5...Returns a list of all the matches of a player
+
+get http://localhost:3000/players/2/matches
+
+###
+//6.....Returns a list of players of a specific match
+
+get http://localhost:3000/matches/2/players
+
+###
+
+//7.....Returns the statistics of the total score,
+//fours, sixes of a specific player based on the player ID
+
+get http://localhost:3000/players/1/playerScores
